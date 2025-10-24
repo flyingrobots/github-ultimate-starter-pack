@@ -41,7 +41,7 @@ PROMPTS
     OSS_SCAFFOLD_CONTACT_EMAIL='hi@test.dev' \
     OSS_SCAFFOLD_SECURITY_EMAIL='sec@test.dev' \
     OSS_SCAFFOLD_COPYRIGHT='Tester Inc.' \
-    bash /root/.gusp/repo/scripts/oss-scaffold.sh <<<""
+    gusp scaffold
   [ "$status" -eq 0 ]
   run grep -q "Tester Inc." LICENSE
   [ "$status" -eq 0 ]

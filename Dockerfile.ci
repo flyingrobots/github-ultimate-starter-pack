@@ -1,4 +1,4 @@
-FROM ghcr.io/astral-sh/bats:latest
+FROM bats/bats:latest
 
 RUN apk add --no-cache git curl nodejs npm bash rsync
 RUN npm install --global markdownlint-cli
@@ -11,6 +11,8 @@ RUN rm -rf .git
 RUN chmod +x scripts/install.sh scripts/gusp.sh scripts/gusp-init.sh scripts/gusp-scaffold.sh scripts/generate-index.mjs scripts/validate-frontmatter.mjs
 
 RUN ./scripts/install.sh >/tmp/install.log && cat /tmp/install.log
+RUN ln -sf /root/.gusp/bin/gusp /usr/local/bin/gusp
+RUN ln -sf /root/.gusp/bin/gusp-scaffold /usr/local/bin/gusp-scaffold
 ENV PATH="/root/.gusp/bin:$PATH"
 
-CMD ["bats", "tests"]
+CMD ["tests"]

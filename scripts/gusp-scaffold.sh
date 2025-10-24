@@ -1,7 +1,14 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-TEMPLATE_ROOT="$(cd "$(dirname "$0")" && pwd)/templates"
+SOURCE="${BASH_SOURCE[0]}"
+while [ -L "$SOURCE" ]; do
+  DIR="$(cd -P "$(dirname "$SOURCE")" && pwd)"
+  SOURCE="$(readlink "$SOURCE")"
+  [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE"
+done
+SCRIPT_DIR="$(cd -P "$(dirname "$SOURCE")" && pwd)"
+TEMPLATE_ROOT="$SCRIPT_DIR/templates"
 
 require_command() {
   if ! command -v "$1" >/dev/null 2>&1; then
