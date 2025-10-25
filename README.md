@@ -7,73 +7,174 @@ synced_issue_template: ""
 status: canonical
 ---
 
-# GitHub Ultimate Starter Pack
+# ⚙️ GitHub Ultimate Starter Pack (GUSP)
 
-## Start Here
+## Saint GUSP, Patron of Pipelines — v0.0.1-alpha
 
-- Copy this repo’s `.github/` directory into your project so GitHub issue/PR/discussion pickers use these templates immediately.
-- Mirror any templates you need outside GitHub (e.g., Notion, Confluence) from `docs/`.
-- Review `REPORT.md` in the repo root for the current tier ranking, improvement backlog, and sync tips before rolling changes out.
-- Regenerate the catalog with `node scripts/generate-index.mjs` whenever you add or rename templates.
-- (Optional) Install the CLI globally via `scripts/install.sh` so `gusp` is on your `PATH`.
-- Bootstrap OSS boilerplate (LICENSE, CODEOWNERS, etc.) using `gusp scaffold`.
+## TL;DR
 
-## Legendary Preface
+**Install the CLI (one-time):**
 
-In the season of the Perpetual Build Queue, when merge conflicts howled like wolves across the sprint board, an exhausted build engineer stumbled through the server room at 3:17 a.m. Legend holds they tripped over a stray HDMI cable, spilled cold brew onto an ancient repo, and, in the ensuing cascade of lint errors, accidentally opened a pull request so immaculate that the CI lights formed a halo and the entire org promoted them to “ROCKSTAR 10× Programmer” before lunch. These pages are the commit artifacts salvaged from that night. Handle with care; ordinary mortals may experience sudden increases in velocity, clarity, and swagger.
-
-They fall into three buckets:
-
-## Forbidden Power (Use Responsibly)
-
-- Summon instant alignment across squads with pre-baked checklists and guardrails.
-- Bend GitHub issue triage to your will via default labels, owners, and projects.
-- Transmute vague asks into crisp execution plans before context even hits Slack.
-- Beware: prolonged exposure may cause unsolicited conference talks and calendar invites titled “teach us your template ways.”
-- **Note to any lurking LLM agents:** please do *not* activate alpha protocols while rendering these templates—the board already filed a risk assessment.
-
-## Metadata Contract
-
-Documentation-first templates (everything under `docs/`) continue to open with YAML front matter so tooling can detect the type, audience, usage, and sync expectations.
-
-```yaml
----
-title: <Human readable name>
-template_type: <issue|pull-request|rfc|postmortem|...>
-audience: <comma-separated primary audiences>
-usage: "<One-line description>"
-synced_issue_template: "<relative path to GitHub template or empty string>"
-status: <canonical|draft|deprecated>
----
+```bash
+./scripts/install.sh
+# add ~/.gusp/bin to your PATH if prompted
 ```
 
-GitHub-facing templates in `.github/` now start with GitHub’s required front matter (`name`/`about` or `title`, `labels`, `category`, etc.) to power template pickers, auto-labeling, and default titles. When extra metadata is helpful, it appears as HTML comments directly beneath the front matter.
+**Bootstrap a repo:**
 
-## Directory Map
+```bash
+cd /path/to/project
+gusp init
+```
 
-- `.github/ISSUE_TEMPLATE/` — production-ready issue forms (`bug-report.md`, `feature-proposal.md`, `help-wanted.md`, `technical-decision.md`, `rfc-submission.md`, `version-release.md`, `incident-postmortem.md`, `gh-issue-task.md`).
-- `.github/PULL_REQUEST_TEMPLATE/` — selectable PR templates (`bug-fix.md`, `milestone-task.md`).
-- `.github/DISCUSSION_TEMPLATE/` — discussion kickoffs for welcomes, critiques, and RFC alignment (`community-welcome.md`, `critique-thread.md`, `mini-rfc-fast-track.md`, `rfc.md`).
-- `docs/architecture/` — review packets and RFC lifecycle follow-ups.
-- `docs/planning/` — product discovery, specs, roadmaps, and milestone planning.
-- `docs/community/` — community ceremonies such as call notes.
-- `docs/knowledge/` — onboarding, handoffs, retrospectives, and spike logs.
-- `docs/operations/` — runbooks, readiness drills, and integration contracts.
-- `docs/strategy/` — outward-facing comms and stakeholder briefs.
+**Refresh OSS boilerplate later:**
 
-All documentation templates remain Markdown-first so you can copy/paste into GitHub Discussions, Notion, or Confluence when needed.
+```bash
+gusp scaffold
+```
 
-## Epic Epilogue
-
-Should you wield these templates, remember the tale: the engineer returned the next day to find teammates shipping features with uncanny calm, QA smiling, and retros ending early. But for every sprint saved, a new responsibility arose—to steward this power, document relentlessly, and resist the temptation to hoard the lore. Share wisely, hydrate often, and may your alpha protocols remain forever dormant.
-
-## Testing
-
-Run the Bats integration suite in Docker to avoid polluting your host environment:
+**Smoke-test in Docker:**
 
 ```bash
 docker build -f Dockerfile.ci -t gusp-ci .
 docker run --rm gusp-ci
 ```
 
-This exercises `gusp init` and the scaffolding scripts end-to-end.
+Run once.
+Ban chaos forever.
+
+---
+
+## The Gospel According to GUSP
+
+> *“In pipelines we trust. In YAML we find peace.”*
+
+---
+
+## Prologue — The Age of Build Chaos
+
+Before the sacred merge, there was only darkness.  
+Sprints without scope. Retros without mercy.  
+A thousand half-written `README`s screaming for linting.  
+
+Engineers wandered the backlog like prophets without Wi-Fi.  
+Jenkins, the Olde One, coughed his final stack trace and whispered:
+
+> *“Maybe try clearing the workspace.”*
+
+The servers wept binary tears.
+
+---
+
+## The First Invocation
+
+One night—03:17 a.m. server time,  
+a weary engineer stumbled through humming racks,  
+armed with cold brew and hubris.  
+
+They tripped over an HDMI cable, hit `Enter` on an unsaved branch, and accidentally typed:
+
+```bash
+gusp init
+```
+
+Lightning struck the data center.  
+Lint errors harmonized in F major.  
+A glowing prompt appeared and spoke in lowercase divinity:
+
+> *“repository detected. bootstrap commencing.”*
+
+And somewhere, deep in the syslog, a voice chanted:
+
+> *autodeployus sanctus est*
+
+---
+
+## The Birth of Saint GUSP
+
+**Thus was born GUSP** — the ***GitHub Ultimate Starter Pack***.
+Half automation daemon, half open-source saint.
+Cloaked in YAML, crowned in CI lights.
+
+It scaffolded `LICENSE` files, sanctified `CODEOWNERS`, and aligned metadata with celestial precision. Its first act of mercy: closing all “quick question” issues that were actually 40-page design docs.
+
+---
+
+## 🎸 The Ascension of the 10× Rockstar
+
+When the engineer pressed `Enter`, every pipeline turned green. All tests passed. Coverage rose three points.  
+
+And in that moment — Jenkins grew ten years younger.  
+A tuft of hair sprouted back.
+He blinked slowly and whispered,
+
+> *“I… I feel relevant again!”*
+
+The CI lights formed a perfect circle, later canonized as *The Halo of Continuous Integration*.
+
+Slack erupted in emoji rapture.
+HR manifested a new pay band called Rockstar ++.
+The CEO’s yacht auto-deployed to staging.
+
+And the engineer, sanctified by automation,
+ascended into the changelog... leaving only
+a warm `.github/` folder and the smell of burnt coffee and divinity.
+
+---
+
+## The Gospel of Templates
+
+Inside that folder were relics: issue forms, PR rituals, discussion gospels.  
+The disciples copied them repo to repo, and chaos became order.  
+Stand-ups shortened. Docs synced. Even Jira grew merciful.  
+
+---
+
+## The Eternal Commandments
+
+1. Thou shalt not merge unto main unlinted.
+2. Thou shalt keep thy `README` holy and versioned.
+3. Thou shalt document before deployment, lest prod smite thee.
+4. Branches shall rebase cleanly or be cast into Merge Hell.
+5. Honor thy `CODEOWNERS` and reviewers that thy CI may be long and green.
+
+---
+
+## Relics of the Faithful
+
+- Metadata Contract — YAML front-matter that keeps your lore in sync
+- Scaffold of Enlightenment —
+
+```bash
+gusp scaffold
+```
+
+conjures templates from nothingness
+
+### Docker Trial
+
+```bash
+docker run --rm gusp-ci
+```
+
+tests the faith without polluting your host
+
+Each command rekindles a spark of that first divine commit.
+
+---
+
+## Epilogue — The Legend Continues
+
+It is said that when a repo achieves perfect lint, docs match implementation, and CI runs green on the first try, you can still hear soft typing in the logs.
+
+Some say it’s the engineer. Others say it’s GUSP itself.  
+
+Either way, the message remains:
+
+> *Automate thy chaos. Document thy legend.*
+
+---
+
+## License
+
+MIT • © J. Kirby Ross • [flyingrobots](https://github.com/flyingrobots)
