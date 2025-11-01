@@ -153,18 +153,32 @@ All scrolls are Markdown; portable across realms (GitHub, Notion, Confluence, Sl
 
 ## ⚔️ EPIC EPILOGUE: THE MERGE THAT FREED MANKIND
 
-_Those who harnessed G.U.S.P. reported strange phenomena:_  
-_Scrum boards cleared overnight. QA smiled. Deploys never broke._  
-_But with great templates came greater accountability._  
-_To document. To share. To teach._  
-_To never again utter the cursed phrase: “who owns this file?”_  
+_Those who invoke G.U.S.P. feel the shift._  
+_Thier backlogs less burdened._  
+_Tickets close themselves._  
+_QA laughs: a sound not heard in years._  
 
-_So take these forms._  
-_Run your pipelines._
-_Shred thy repo._
-_And remember: every merge is a prayer, every rollback a penance._  
-_Hydrate. Commit often. Document everything._  
-_And may your **alpha protocols** remain forever dormant._
+_Deploys became rituals._  
+_Commit after commit, their repos sang._  
+_And every green checkmark was a hymn of release._  
+
+_Yet the price of mastery is vigilance eternal._  
+_To document. To refactor. To share the lore._  
+_For the moment arrogance commits without review,_  
+_the build breaks, and the gods of CI remember._  
+
+_So raise your mug, pilgrim of the pipeline._  
+_For you have walked through merge hell_  
+_and returned with rebased grace._  
+
+_Remember this creed:_  
+
+_Every merge is a prayer._  
+_Every rollback, a penance._  
+
+_Hydrate. Commit often. Push with intention, and pull ff-only._  
+
+_For builds are ephemeral, devs mortal, yet the blame eternal. 🕯️_
 
 ## 🦇 TESTING (OF FAITH)
 
@@ -181,4 +195,4 @@ Run gusp init, and try again beneath a full moon.
 
 **G.U.S.P.**  
 _AUTODEPLOYUS SANCTUS EST._  
-_For pipelines are mortal, but the commit is eternal. 🕯️_
+_For builds are ephemeral, devs mortal, yet the blame eternal. 🕯️_
